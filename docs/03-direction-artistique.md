@@ -5,18 +5,18 @@ Le gîte "Les Restanques" n'est pas un produit d'investissement anonyme ; c'est 
 
 ## 2. Ce qu'on évite explicitement
 Pour garantir un positionnement haut de gamme et authentique, Stitch devra s'éloigner des écueils suivants :
-* **Les clichés provençaux éculés :** Pas d'omniprésence de violet lavande, de bois cérusé "shabby chic", ni de typographies manuscrites façon "bistro" qui font daté.
+* **Les clichés provençaux caricaturaux :** Si l'on s'autorise désormais des tons floraux, ils doivent rester légers et pastel (lavande légère) pour éviter l'omniprésence d'un violet trop saturé. On évite toujours le bois cérusé "shabby chic", ni de typographies manuscrites façon "bistro" qui font daté.
 * **L'esthétique "Hôtel Corporate" :** Éviter les grilles parfaitement symétriques, les icônes vectorielles abstraites et froides, et les boutons d'appel à l'action agressifs.
 * **Les "Patterns IA" génériques :** Bannir le *glassmorphism* (effets de verre flouté), les ombres portées excessives, les illustrations 3D flat et les espaces blancs aseptisés sans texture.
 
 ## 3. Direction générale
-**Organique, Éditorial, Solaire.** L'interface doit ressembler aux pages d'un beau magazine de voyage (type *Kinfolk* ou *Cereal*) ou à un carnet d'adresses pointu. Le design doit laisser la photographie respirer au centre de l'expérience, soutenue par une structure asymétrique qui donne un rythme naturel et non forcé à la lecture, évoquant la topographie en terrasses (les fameuses "restanques").
+**Provence douce et chic, Organique, Éditorial.** L'interface doit ressembler aux pages d'un beau magazine de voyage (type *Kinfolk* ou *Cereal*) ou à un carnet d'adresses pointu. Le design doit laisser la photographie respirer au centre de l'expérience, soutenue par une structure asymétrique qui donne un rythme naturel et non forcé à la lecture, évoquant la topographie en terrasses (les fameuses "restanques").
 
 ## 4. Palette de couleurs
-Une palette minérale et végétale, inspirée de la terre et du soleil de la région, sans jamais tomber dans la caricature :
-* **Fonds et respirations :** Des blancs cassés, calcaire ou lin, pour la douceur.
+Une palette végétale et minérale douce, directement inspirée de couleur.jpeg pour sortir du côté trop monochrome :
+* **Fonds et respirations :** Des blancs cassés, calcaire ou lin, pour la douceur, enrichis d'un très subtil lilas/lavande pâle pour apporter une chaleur élégante.
+* **Accents et éléments UI :** Un camaïeu doux inspiré de la nature : vert olive clair/sauge, jaune sable chaud, et mauve/lavande grisé pour souligner les éléments interactifs.
 * **Typographie et contrastes :** Un gris anthracite profond ou un vert olive très sombre (plus élégant et moins dur qu'un noir pur).
-* **Accents :** Des touches subtiles de terre cuite (terracotta) ou de pierre dorée pour souligner les éléments interactifs sans rompre l'harmonie.
 
 ## 5. Typographie
 * **Titrage (Headings) :** Une typographie Serif (à empattements) contrastée, avec un dessin élégant et légèrement classique, pour apporter ce côté "éditorial" et intemporel.
@@ -35,9 +35,9 @@ La mise en page doit jouer sur l'asymétrie modérée et le chevauchement subtil
 Un registre élégant mais accessible. Le site étant bilingue, le ton en français utilisera le vouvoiement de politesse, mais s'exprimera à la première personne (ou via une voix incarnée par Judith) pour accueillir le visiteur. Les textes doivent être concis, factuels sur les équipements, mais poétiques dans l'évocation de l'expérience de séjour.
 
 ## 9. Les 3 mots pour Stitch
-* `Editorial`
-* `Sunbaked`
-* `Intimate`
+* Editorial
+* Soft-Provence
+* Intimate
 
 ## 10. Points de vigilance responsive
 * **Le Calendrier de disponibilité :** Sur mobile, le simulateur de prix et le calendrier doivent éviter les affichages sur deux colonnes. Privilégier un défilement vertical infini des mois avec une sélection claire des dates au doigt.
