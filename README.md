@@ -4,7 +4,7 @@ A modern presentation and direct booking website for **"Les Restanques"**, an of
 
 ---
 
-## 🌿 Overview & Key Features
+## Overview & Key Features
 
 - **Bilingual Public Showcase (FR / EN):** Magazine-style editorial design (*Provence Minérale*) built entirely around the property’s own photography, with interactive Google Maps, a filterable gallery, amenities overview, and authentic 5-star Airbnb guest reviews.
 - **Direct 3-Step Booking Flow:** Direct booking request engine without upfront online payment. Selected dates are immediately held (`pending`) on the calendar upon submission to prevent double-booking.
@@ -14,7 +14,7 @@ A modern presentation and direct booking website for **"Les Restanques"**, an of
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** [Next.js 14](https://nextjs.org/) (App Router, React 18, TypeScript)
 - **Styling & UI:** [Tailwind CSS](https://tailwindcss.com/), Radix UI, Lucide Icons
@@ -24,7 +24,7 @@ A modern presentation and direct booking website for **"Les Restanques"**, an of
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 
@@ -92,13 +92,13 @@ Open your browser and navigate to:
 
 ---
 
-## 📦 Database Setup (Supabase)
+## Database Setup (Supabase)
 
 If deploying with Supabase, run the initialization script provided in [`supabase/schema.sql`](./supabase/schema.sql) in your Supabase SQL Editor to create the required tables (`bookings`, `blocked_dates`, `pricing_rules`), seed initial seasonal rates, and configure Row Level Security (RLS) policies.
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Command | Description |
 | :--- | :--- |
@@ -110,7 +110,7 @@ If deploying with Supabase, run the initialization script provided in [`supabase
 
 ---
 
-## 🎨 Design System — « Provence Minérale »
+## Design System — « Provence Minérale »
 
 The public site follows an **Organic Editorial** direction (see [`docs/03-direction-artistique.md`](./docs/03-direction-artistique.md)):
 generous white space, moderate asymmetry, hairline rules instead of cards, and photography as the main subject.
@@ -136,7 +136,7 @@ Reusable CSS component classes: `.shell`, `.eyebrow`, `.photo` / `.photo-zoom`, 
 
 ---
 
-## 🖼️ Photography
+## Photography
 
 All images are **local** — no external image host, no `remotePatterns` in `next.config.mjs`.
 
@@ -159,7 +159,6 @@ To add a photo: drop it in the right folder, add an entry to `photos`, then refe
 
 ---
 
-## 📄 License & Contact
+## License & Contact
 
-- **Property:** Gîte Les Restanques — 8 cours de la Liberté, 84490 Saint-Saturnin-lès-Apt, France.
-- **Host:** Judith (`les-restanques@gmail.com`)
+- **Property:** PROTELEC - protelec.fr
