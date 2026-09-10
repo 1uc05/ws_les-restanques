@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Fontes injectées par next/font (voir src/app/layout.tsx) */
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --background: 40 33% 97%; /* #FBF9F5 calcaire */
+    --foreground: 90 9% 13%; /* #22251F encre olive */
+
+    --card: 40 33% 97%;
+    --card-foreground: 90 9% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 90 9% 13%;
+
+    --primary: 76 30% 29%; /* #586033 olivier */
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 40 33% 93%; /* #F5F1E8 lin */
+    --secondary-foreground: 90 9% 13%;
+
+    --muted: 40 30% 91%;
+    --muted-foreground: 75 5% 45%; /* #77786B */
+
+    --accent: 21 30% 53%; /* #B17A5E terre cuite */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 27% 88%; /* #EBE5D8 */
+    --input: 38 25% 82%; /* #DCD4C2 */
+    --ring: 76 30% 29%;
+
+    --radius: 2px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background font-sans text-ink-soft antialiased;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-ink;
+    font-weight: 400; /* la finesse fait l'élégance : jamais de gras sur les titres */
+  }
+
+  ::selection {
+    background-color: #d5dabb;
+    color: #1c1f14;
+  }
+
+  /* Focus visible sobre et lisible partout */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: 2px solid #586033;
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f1e8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dcd4c2;
+    border: 3px solid #f5f1e8;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c3b9a2;
+  }
+}
+
+@layer components {
+  /* ---------- Grille éditoriale ---------- */
+  .shell {
+    @apply mx-auto w-full max-w-editorial px-5 sm:px-8 lg:px-16;
+  }
+  .shell-narrow {
+    @apply mx-auto w-full max-w-4xl px-5 sm:px-8;
+  }
+
+  /* ---------- Micro-typographie ---------- */
+  .eyebrow {
+    @apply font-sans text-eyebrow font-semibold uppercase text-olive-700;
+  }
+  .eyebrow-light {
+    @apply font-sans text-eyebrow font-semibold uppercase text-provence-200/90;
+  }
+
+  /* Filet fin décoratif après un intertitre */
+  .rule {
+    @apply block h-px w-14 bg-terracotta-400/70;
+  }
+
+  .lede {
+    @apply max-w-prose text-lede text-ink-soft;
+  }
+
+  /* ---------- Liens de lecture ---------- */
+  .link-underline {
+    @apply relative inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-wideish text-ink transition-colors duration-300;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute -bottom-1.5 left-0 h-px w-full origin-left bg-ink/30 transition-transform duration-500 ease-editorial;
+  }
+  .link-underline:hover::after {
+    @apply scale-x-0 origin-right;
+  }
+
+  /* ---------- Traitement photographique ---------- */
+  /* Voile chaud très léger : uniformise des photos amateur, réchauffe l'ensemble */
+  .photo {
+    @apply relative overflow-hidden bg-provence-200;
+  }
+  .photo img {
+    @apply h-full w-full object-cover;
+    filter: saturate(0.94) contrast(1.02);
+  }
+  .photo::after {
+    content: "";
+    @apply pointer-events-none absolute inset-0;
+    background: linear-gradient(
+      180deg,
+      rgba(217, 179, 130, 0.06) 0%,
+      rgba(34, 37, 31, 0.04) 100%
+    );
+    mix-blend-mode: multiply;
+  }
+  .photo-zoom img {
+    @apply transition-transform duration-[1200ms] ease-editorial;
+  }
+  .group:hover .photo-zoom img,
+  .photo-zoom:hover img {
+    transform: scale(1.045);
+  }
+
+  /* ---------- Révélation au scroll ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+
+  /* ---------- Défilement horizontal (galeries mobiles) ---------- */
+  .swipe-row {
+    @apply flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain;
+    scrollbar-width: none;
+  }
+  .swipe-row::-webkit-scrollbar {
+    display: none;
+  }
+  .swipe-item {
+    @apply snap-start shrink-0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Texte clair sur photo : ombre portée douce plutôt qu'un voile opaque */
+  .text-shadow-photo {
+    text-shadow: 0 1px 28px rgba(20, 22, 14, 0.55), 0 1px 3px rgba(20, 22, 14, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
